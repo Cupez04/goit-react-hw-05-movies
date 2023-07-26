@@ -1,0 +1,88 @@
+.pacman_container {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.pacman {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border-left: 10px solid #ffcc33;
+  position: relative;
+  animation: pacman-animate 1s infinite linear;
+}
+
+.pacman_top {
+  width: 50%;
+  height: 50%;
+  border-top: 10px solid #ffcc33;
+  border-right: 10px solid #ffcc33;
+  border-radius: 50% 0 0 0;
+  background-color: transparent;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%) rotate(0deg);
+  animation: pacman-top-animate 0.5s infinite linear;
+}
+
+.pacman_bottom {
+  width: 50%;
+  height: 50%;
+  border-bottom: 10px solid #ffcc33;
+  border-right: 10px solid #ffcc33;
+  border-radius: 0 50% 0 0;
+  background-color: transparent;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%) rotate(0deg);
+  animation: pacman-bottom-animate 0.5s infinite linear;
+}
+
+.loading_text {
+  margin-top: 10px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #888;
+}
+
+@keyframes pacman-animate {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes pacman-top-animate {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(45deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes pacman-bottom-animate {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(-45deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}

@@ -1,0 +1,25 @@
+.chr_container{
+    list-style-type: none;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+.chr_card{
+    text-align: center;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    width: 200px;
+    border-radius: 5px;
+    box-shadow: inset 0 0 10px 5px rgba(0, 0, 0, 0.3);
+    line-height: 0.6;
+}
+.chr_img{
+    width: 200px;
+    height: 300px;
+}
+.chr_name{
+    font-weight: 600;
+}
+
+.chr{
+    font-size: 12px;
+}
