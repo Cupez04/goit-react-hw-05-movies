@@ -1,0 +1,22 @@
+import{R as o,s as C,P as y,j as t,L as G,n as P,u as B,r as p,a as D,b as R,c as w,B as b,O as F,N as $}from"./index-7250dade.js";import{C as L,a as k}from"./api-1deb9de0.js";import{T as h}from"./Typography-784682a3.js";var S={color:void 0,size:void 0,className:void 0,style:void 0,attr:void 0},O=o.createContext&&o.createContext(S),i=globalThis&&globalThis.__assign||function(){return i=Object.assign||function(e){for(var n,s=1,a=arguments.length;s<a;s++){n=arguments[s];for(var r in n)Object.prototype.hasOwnProperty.call(n,r)&&(e[r]=n[r])}return e},i.apply(this,arguments)},H=globalThis&&globalThis.__rest||function(e,n){var s={};for(var a in e)Object.prototype.hasOwnProperty.call(e,a)&&n.indexOf(a)<0&&(s[a]=e[a]);if(e!=null&&typeof Object.getOwnPropertySymbols=="function")for(var r=0,a=Object.getOwnPropertySymbols(e);r<a.length;r++)n.indexOf(a[r])<0&&Object.prototype.propertyIsEnumerable.call(e,a[r])&&(s[a[r]]=e[a[r]]);return s};function E(e){return e&&e.map(function(n,s){return o.createElement(n.tag,i({key:s},n.attr),E(n.child))})}function M(e){return function(n){return o.createElement(A,i({attr:i({},e.attr)},n),E(e.child))}}function A(e){var n=function(s){var a=e.attr,r=e.size,c=e.title,m=H(e,["attr","size","title"]),x=r||s.size||"1em",l;return s.className&&(l=s.className),e.className&&(l=(l?l+" ":"")+e.className),o.createElement("svg",i({stroke:"currentColor",fill:"currentColor",strokeWidth:"0"},s.attr,a,m,{className:l,style:i(i({color:e.color||s.color},s.style),e.style),height:x,width:x,xmlns:"http://www.w3.org/2000/svg"}),c&&o.createElement("title",null,c),e.children)};return O!==void 0?o.createElement(O.Consumer,null,function(s){return n(s)}):n(S)}function U(e){return M({tag:"svg",attr:{viewBox:"0 0 20 20",fill:"currentColor"},child:[{tag:"path",attr:{fillRule:"evenodd",d:"M9.707 16.707a1 1 0 01-1.414 0l-6-6a1 1 0 010-1.414l6-6a1 1 0 011.414 1.414L5.414 9H17a1 1 0 110 2H5.414l4.293 4.293a1 1 0 010 1.414z",clipRule:"evenodd"}}]})(e)}const W={},q=C(G)`
+    display: inline-flex;
+    align-items: center;
+    gap: 40px;
+    padding: 8px 0;
+    color: black;
+    text-decoration: none;
+    font-weight: 500;
+    text-transform: uppercase;
+
+    :hover{
+        color: orange;
+        scale: 1.2;
+    }
+`,N=({to:e,children:n})=>t.jsxs(q,{to:e,className:W.back,children:[t.jsx(U,{size:"24"}),n]});N.propTypes={to:y.object,children:y.node};const J=P("img")({width:200,height:"100%",objectFit:"cover",objectPosition:"center"}),K=P("ul")({listStyle:"none",display:"flex",padding:0,gap:"16px"}),Q={Img:J,GenresList:K},{Img:V,GenresList:X}=Q,Y="https://image.tmdb.org/t/p",I=C($)`
+  color: #1976d2;
+
+  &.active {
+    color: orange;
+    scale: 1.3;
+  }
+`,se=()=>{var v;const{movieId:e}=B(),[n,s]=p.useState({}),[a,r]=p.useState(!1),c=D(),m=((v=c.state)==null?void 0:v.from)??"/";p.useEffect(()=>{(async()=>{try{r(!0),await k.fakePromise(300);const d=await k.MovieDetails(e);s(d),console.log(d)}catch(d){console.log(d)}finally{r(!1)}})()},[e]);const{title:x,name:l,release_date:g,overview:T,genres:u,poster_path:f,vote_average:_}=n,z=(_*10).toFixed(2);return t.jsx(t.Fragment,{children:a?t.jsx(R,{}):t.jsx(L,{children:t.jsxs("div",{children:[t.jsxs(w,{sx:{display:"flex",alignItems:"center",gap:2,overflow:"hidden",mt:5,p:2},children:[t.jsxs("div",{style:{display:"flex",flexDirection:"column"},children:[t.jsx(N,{to:m,children:"Go Back"}),t.jsx(V,{src:f?`${Y}/w200/${f}`:"https://via.placeholder.com/200/",alt:"mi imagen",width:200,sx:{height:"100%",objectFit:"cover"}}),!f&&t.jsx("p",{style:{textAlign:"center"},children:"Image not available"})]}),t.jsxs(b,{sx:{flexGrow:1,display:"grid",gap:1},children:[t.jsxs(h,{variant:"h5",children:[x||l," (",g==null?void 0:g.substring(0,4),")"]}),t.jsxs(h,{variant:"p",children:["User score: ",z,"%"]}),t.jsx(h,{variant:"h5",children:"Oveview"}),t.jsx(h,{variant:"p",children:T}),t.jsx(h,{variant:"h5",children:"Genres"}),t.jsx(X,{children:u&&u.length&&u.map(({id:j,name:d})=>t.jsx("li",{children:d},j))})]})]}),t.jsx(L,{maxWidth:"xs",children:t.jsx(w,{sx:{display:"flex",alignItems:"center",gap:2,overflow:"hidden",mt:2,p:2},children:t.jsxs(b,{sx:{flexGrow:1,display:"grid",gap:1},children:[t.jsx(h,{variant:"h5",children:"Additional Information"}),t.jsxs("ul",{style:{listStyle:"none"},children:[t.jsx("li",{children:t.jsx(I,{to:"cast",state:{...c.state},children:"Cast"})}),t.jsx("li",{children:t.jsx(I,{to:"reviews",state:{...c.state},children:"Reviews"})})]})]})})}),t.jsx(F,{})]})})})};export{se as default};
